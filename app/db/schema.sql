@@ -1,7 +1,7 @@
-DROP DATABASE IF EXISTS todos_db;
-CREATE DATABASE todos_db;
+DROP DATABASE IF EXISTS webapp;
+CREATE DATABASE webapp;
 
-USE todos_db;
+USE webapp;
 
 CREATE TABLE todos
 (

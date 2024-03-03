@@ -1,14 +1,18 @@
 const mysql = require('mysql');
+const fs = require('fs');
 let connection;
+
+const host = process.env.MYSQL_HOST
+const password = process.env.MYSQL_ROOT_PASSWORD
 
 if(process.env.JAWSDB_URL) {
     connection = mysql.createConnection(process.env.JAWSDB_URL);
 } else {
     connection = mysql.createConnection({
-        host: 'localhost',
+        host: host,
         user: 'root',
-        password: 'root',
-        database: 'todos_db'
+        password: password,
+        database: 'webapp'
     });
 }
 
